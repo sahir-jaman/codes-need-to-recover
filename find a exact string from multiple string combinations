@@ -1,0 +1,30 @@
+//codeforces 1328B 
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main()
+{
+    int t, n, k, i, j;
+    scanf("%d", &t);
+    while(t--)
+    {
+        scanf("%d%d", &n, &k);
+        for(i = 1; i < n; i++)
+        {
+            if(k > i)
+                k =k-i;
+            else
+                break;
+        }
+        for(j = 1; j <= n; j++)
+        {
+            if(j == n-i || j == n-k+1)
+                printf("b");
+            else
+                printf("a");
+        }
+        printf("\n");
+    }
+    return 0;
+}
